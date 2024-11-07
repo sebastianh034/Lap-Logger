@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Race Logger</title>
+    <link rel="stylesheet" href="styles sheets/Log.css"> 
+    <link rel="icon" href="images/tracks-laguna-seca-raceway.jpg" type="image/png">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="track_times.html">Track Times</a></li>
+                <li><a href="log_times.html">Log Times</a></li>
+                <li><a href="personal_time.html">Time Lookup</a></li>
+            </ul>
+            <ul class="profile">
+                <li><a href="Profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <form>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="track">Track:</label>
+                <input type="text" id="track" name="track" required>
+            </div>
+            <div class="input-group">
+                <label for="car">Car:</label>
+                <input type="text" id="car" name="car" required>
+            </div>
+            <div class="input-group">
+                <label for="time">Lap Time:</label>
+                <input type="text" id="time" name="time" required>
+            </div>
+            <div class="input-group">
+                <label for="number">Car Number:</label>
+                <input type="text" id="number" name="number" required>
+            </div>
+            <div class="input-group">
+                <label for="top-speed">Top Speed:</label>
+                <input type="text" id="top-speed" name="top-speed">
+            </div>
+            <div class="input-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Type anything here..."></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="Scripts/log.js"></script> <!-- Link to the separate JavaScript file -->
+</body>
+</html>

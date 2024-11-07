@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Times</title>
+    <link rel="stylesheet" href="styles sheets/personal.css">
+    <link rel="icon" href="images/tracks-laguna-seca-raceway.jpg" type="image/png">
+    <script src="Scripts/personal.js" defer></script> 
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="track_times.html">Track Times</a></li>
+                <li><a href="log_times.html">Log Times</a></li>
+                <li><a href="personal_time.html">Time Lookup</a></li>
+            </ul>
+            <ul class="profile">
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="track-times-container">
+        <h1 id="welcome-message">Welcome, User!</h1>        
+        <table id="track-times-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Track</th>
+                    <th>Car</th>
+                    <th>Time</th>
+                    <th>Number</th>
+                    <th>Top Speed</th>
+                    <th>Comments</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Track times will be populated here dynamically -->
+                <tr>
+                    <td data-key="name"></td>
+                    <td data-key="track"></td>
+                    <td data-key="car"></td>
+                    <td data-key="time"></td>
+                    <td data-key="number"></td>
+                    <td data-key="top_speed"></td>
+                    <td data-key="comments"></td>
+                    <td>
+                        <button onclick="enableEdit(this.parentElement.parentElement, 1)">Edit</button>
+
+                    </td>
+                </tr>
+                <!-- Additional rows can be added here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

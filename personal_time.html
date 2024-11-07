@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Lookup</title>
+    <link rel="stylesheet" href="styles sheets/personal.css">
+    <link rel="icon" href="images/tracks-laguna-seca-raceway.jpg" type="image/png">
+    <script src="Scripts/TimeL.js" defer></script> 
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="track_times.html">Track Times</a></li>
+                <li><a href="log_times.html">Log Times</a></li>
+                <li><a href="personal_time.html">Time Lookup</a></li>
+            </ul>
+            <ul class="profile">
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section for displaying track times -->
+    <div class="track-times-container">
+        <div class="input-group">
+            <label for="track">Track:</label>
+            <input type="text" id="track" name="track" required>
+            <button type="submit">submit</button>
+            <div class="TimesF">
+                <h1>Times for </h1>
+            </div>
+        </div>
+        <table id="track-times-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Track</th>
+                    <th>Car</th>
+                    <th>Time</th>
+                    <th>Number</th>
+                    <th>Top Speed</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Track times will be populated here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

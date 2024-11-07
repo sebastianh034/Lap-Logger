@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+nav {
+    background-color: #d02b2b; /* Dark background for the nav */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; /* Center the nav-list */
+    align-items: center;
+    position: relative;
+}
+
+.nav-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align items horizontally */
+}
+
+.nav-list li {
+    margin: 0 20px; /* Spacing between items */
+}
+
+.nav-list a {
+    text-decoration: none; /* Remove underlines */
+    color: rgba(255, 255, 255, 0.554); /* White text color */
+    padding: 14px 20px; /* Padding around the text */
+    display: block; /* Make the link fill the list item */
+}
+
+.nav-list a:hover {
+    background-color: #676464; /* Darker background on hover */
+    transition: background-color 0.8s; /* Smooth transition */
+}
+
+
+.profile {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 20px; /* Move the profile to the far right */
+}
+
+.profile a {
+    text-decoration: none; /* Remove underlines */
+    color: rgba(255, 255, 255, 0.554); /* White text color */
+    padding: 14px 20px; /* Padding around the text */
+    display: block; /* Make the link fill the list item */
+}
+
+.profile a:hover {
+    background-color: #676464; /* Darker background on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Track times container styles */
+.track-times-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.track-times-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .nav-list li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .track-times-container {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
