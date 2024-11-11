@@ -1,3 +1,7 @@
+const apiUrl = window.location.protocol === 'file:'
+  ? 'http://localhost:8080' // Local API server during development
+  : ''; // Production API
+
 document.addEventListener('DOMContentLoaded', () => {
     const timeInput = document.getElementById('time');
     timeInput.addEventListener('blur', () => {
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // This is where you add the fetch call to send data to the server
-        fetch('http://localhost:5000/save-data', { // fetches must change for when deploying
+        fetch('/save-data', { // fetches must change for when deploying
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

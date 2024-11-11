@@ -1,5 +1,9 @@
+const apiUrl = window.location.protocol === 'file:'
+  ? 'http://localhost:8080' // Local API server during development
+  : ''; // Production API
+
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("http://localhost:5000/get-data") // Ensure the correct URL
+    fetch("/get-data") // Ensure the correct URL
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

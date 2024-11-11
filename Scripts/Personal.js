@@ -1,3 +1,7 @@
+const apiUrl = window.location.protocol === 'file:'
+  ? 'http://localhost:8080' // Local API server during development
+  : ''; // Production API
+
 document.addEventListener("DOMContentLoaded", function() {
     // Hard-coded user name for filtering and displaying
     const userName = "sebastian hernandez";
@@ -7,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     welcomeMessage.textContent = `Welcome, ${userName}!`;
 
     // Fetch the track times data
-    fetch("http://localhost:5000/get-data") // Adjust URL as needed
+    fetch("/get-data") // Adjust URL as needed
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -89,7 +93,7 @@ function saveEdit(row, id) {
     });
 
     // Send updated data to the server
-    fetch(`http://localhost:5000/update-data/${id}`, {
+    fetch(`/update-data/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -115,7 +119,7 @@ function deleteEntry(id, row) {
     // Confirm deletion
     if (confirm("Are you sure you want to delete this entry?")) {
         // Send DELETE request to the server
-        fetch(`http://localhost:5000/delete-data/${id}`, {
+        fetch(`/delete-data/${id}`, {
             method: 'DELETE'
         })
         .then(response => {

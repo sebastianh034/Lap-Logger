@@ -135,9 +135,6 @@ def after_request(response):
 
 if __name__ == '__main__':
     init_db()  # Initialize the database
-    app.run(port=5000, debug=True)
+    app.run(port=5000, host='0.0.0.0')
 
-# if __name__ == '__main__':
-#     init_db()  # Initialize the database
-#     app.run(port=5000, host='0.0.0.0')
 
